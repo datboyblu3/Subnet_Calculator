@@ -31,10 +31,4 @@ def validate_ip_file():
 
 	return ip_list
 
-#Validate all IP octets 
-def validate_ip_octet():
-
-	
-	#Read input from command line for a file of IPs, single IP or
-	#an x amount specified by the user
 	
