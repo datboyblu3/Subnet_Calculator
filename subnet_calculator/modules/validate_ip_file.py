@@ -1,4 +1,3 @@
-import random
 import os.path
 import argparse
 
