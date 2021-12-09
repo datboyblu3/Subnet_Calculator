@@ -31,23 +31,10 @@ def validate_ip_file():
 
 	return ip_list
 
-
-
 #Validate all IP octets 
 def validate_ip_octet():
 
-	'''
-	Read input from command line for a file of IPs, single IP or
-	an x amount specified by the user
-	'''
-
-
-	try:
-
-		while True:
-			#Take input as either a file or single IP address
-
-	except KeyboardInterrupt:
-		print("User interruption! Exiting now!")
-	except ValueError:
-		print("Incorrect value entered, please try again!")
+	
+	#Read input from command line for a file of IPs, single IP or
+	#an x amount specified by the user
+	
