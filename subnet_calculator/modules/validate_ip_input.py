@@ -11,8 +11,8 @@ parser.add_argument('-i', '--ip', nargs='+', help='Specify IP address(es)')
 args = parser.parse_args()
 
 
-#Determine if file exists
-def validate_ip_file():
+#Determine
+def validate_ip_input():
 
 	if args.file:
 		ip_file = args.file
