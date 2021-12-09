@@ -21,6 +21,7 @@ def validate_ip_file():
 	while True:
 		if os.path.isfile(iplist):
 			print("Good to go")
+			break
 		else:
 			print("File does not exist, please try again")
 
