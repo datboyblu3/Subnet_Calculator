@@ -1,4 +1,3 @@
-import sys
 import random
 import os.path
 import argparse
@@ -15,15 +14,24 @@ args = parser.parse_args()
 
 #Determine if file exists
 def validate_ip_file():
-	ip_list = args.file
+	ip_file = args.file
 
 	#Verify if file exists
 	while True:
-		if os.path.isfile(iplist):
+		if os.path.isfile(ip_file):
 			print("Good to go")
 			break
 		else:
 			print("File does not exist, please try again")
+
+	selected_ip_file = open(ip_file,'r')
+	selected_ip_file.seek(0)
+	ip_list = selected_ip_file.readlines()
+	selected_ip_file.close()
+
+	return ip_list
+
+
 
 #Validate all IP octets 
 def validate_ip_octet():
@@ -32,6 +40,8 @@ def validate_ip_octet():
 	Read input from command line for a file of IPs, single IP or
 	an x amount specified by the user
 	'''
+
+
 	try:
 
 		while True:
