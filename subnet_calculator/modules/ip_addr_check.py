@@ -16,5 +16,5 @@ def ip_addr_check(ip_list):
 		octets = ip.split('.')
 		print(octets)
 
-		#[(ip) for ip in ip_list if(len(octets) == 4) and (all(0 <= int(octets[ip]) <=255))]
+		#[(ip) for ip in ip_list if(len(octets) == 4) and (all(0 <= int(octets[ip] <=255)))]
 
