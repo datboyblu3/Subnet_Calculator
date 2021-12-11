@@ -7,7 +7,7 @@ import sys
 #Verify each octet in the IP Addresses
 def ip_addr_check(ip_list):
 	octets = ip_list.split('.')
-	#return print(len(octets))
+	#return print(len(octets) and type(octets))
 	#Different conditions for the types of iput
 	#1) Single or multiple IP Addresses submited
 	#2) A file of IP Addresses submitted
@@ -17,7 +17,7 @@ def ip_addr_check(ip_list):
 		octets = ip.split('.')
 		print(octets)'''
 
-	[int(ip) for ip in octets if(len(octets) == 4) and (all(0 <= int(octets[ip] <=255)))]
+	#[int(ip) for ip in octets if(len(octets) == 4) and (all(0 <= int(octets[ip] <=255)))]
 
 
 ip_addr_check("192.168.12.4")
