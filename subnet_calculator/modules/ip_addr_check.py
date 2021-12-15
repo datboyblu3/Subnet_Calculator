@@ -6,18 +6,19 @@ import sys
 
 #Verify each octet in the IP Addresses
 def ip_addr_check(ip_list):
-	octets = ip_list.split('.')
-	#return print(len(octets) and type(octets))
-	#Different conditions for the types of iput
-	#1) Single or multiple IP Addresses submited
-	#2) A file of IP Addresses submitted
 
-	'''for ip in ip_list:
+	for x,ip in enumerate(ip_list):
 		ip = ip.rstrip("\n")
 		octets = ip.split('.')
-		print(octets)'''
-
-	#[int(ip) for ip in octets if(len(octets) == 4) and (all(0 <= int(octets[ip] <=255)))]
+		if(len(octets) == 4) and (1 <= octets[x] <= 255):
+			continue
+		else:
+			print("Invalid IP address")
+			sys.exit()
+			
+	
+	#[ip for ip in octets if(len(octets) == 4) and all(0 <= octets[ip] <=255)]
+	
 
 
 ip_addr_check("192.168.12.4")
